@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <a href="{{ .Get `link` }}"><img class="card-img-top" src="{{ .Get `img_src`}}"></a>
+  <div class="card-body">
+    <h5 class="card-title">{{ .Get "title" }}</h5>
+    <p class="card-text">{{ .Get "body" }}</p>
+    <a href="{{ .Get `link` }}" class="card-link">View recipe</a>
+  </div>
+  <div class="card-footer">
+    <span class="badge badge-secondary">{{ .Get "level" }}</span>
+    <small class="text-muted">{{ .Get "time" }}</small>
+  </div>
+</div>

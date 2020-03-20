@@ -1,0 +1,16 @@
+{
+    "name": "deeplens",
+    "short_name": "deeplens",
+    "icons": [
+        {
+            "src": "/icons/favicon.ico",
+            "sizes": "32x32",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#000000",
+    "theme_color": "#000000"
+}

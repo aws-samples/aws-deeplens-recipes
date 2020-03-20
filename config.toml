@@ -1,0 +1,22 @@
+baseURL = "http://awsdeeplens.recipes/"
+languageCode = "en-us"
+title = "AWS DeepLens Recipes"
+theme = "learn"
+uglyurls = false
+sectionPagesMenu = "main"
+relativeURLs = true
+
+[params]
+themeVariant = "mine"
+showVisitedLinks = false
+author = "Juan Bustos"
+description = "AWS DeepLens Recipes"
+disableSearch = false
+disableAssetsBusting = false
+disableLanguageSwitchingButton = true
+disableShortcutsTitle=false
+disableInlineCopyToClipBoard = true
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "tango"

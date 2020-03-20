@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  {{ if isset .Params `link` }}
+  <a href="{{ .Get `link`}}"><img class="card-img-top" src="{{ .Get `img_src`}}"></a>
+  {{ else }}
+  <img class="card-img-top" src="{{ .Get `img_src`}}">
+  {{ end }}
+  <div class="card-body">
+    <h5 class="card-title">{{ .Get "title" }}</h5>
+    <p class="card-text">{{ .Get "body" }}</p>
+  </div>
+</div>
