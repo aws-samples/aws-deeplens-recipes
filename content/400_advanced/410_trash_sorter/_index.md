@@ -9,25 +9,30 @@ tags:
 ---
 ## Deeplens Trash Classiffication Recipe
 
-The Environmental Protection Agency estimates that 75% of waste is recyclable, yet only 34% is making it into the recycle bin. Often it can be confusing to know which bin: Landfill, Compost, or Recycling to toss an item into. Sometimes we all need a little help to make the right decision!  
+Today we’re going to show you how to build a prototype trash sorter using [AWS DeepLens](https://aws.amazon.com/deeplens/), AWS’s deep learning-enabled video camera designed for developers to learn machine learning in a fun, hands-on way. This prototype trash sorter project teaches you how to train image classification models with custom data. Image classification is a powerful machine learning technique where a machine learning model learns how to distinguish between many different objects inside images by observing many examples. You can apply techniques learned in this tutorial to solve problems that require sorting objects into different bins based on imagery (such as sorting fruits by size or grade) or detecting the existence of an object in an image (such as recognizing the type of object at self-checkout). 
 
-To help our friends and colleagues make the right choice, we trained image classification machine learning model to distinguish between the different types of trash. We then used AWS DeepLens, a deep-learning enabled video camera, to predict if the trash item can be recycled or composted instead of being thrown into the landfill.
+This tutorial was inspired by the smart recycle arm project created for the AWS Public Sector Builders Fair. For more information, see [Demonstration: Automatic Recycling](https://www.youtube.com/watch?v=QF0QjRjBwFs) on YouTube.
 
 {{< youtube QF0QjRjBwFs >}}
 
-![Reference Architecture](/images/400_advanced/410_build_a_custom_ml/architecturediagram.png)
+### Solution overview
 
-#### In this recipe, we will show you how to:
+This walkthrough includes the following steps:
 
 1. Collect and prepare your own dataset to feed into an ML algorithm
-1. Train a model with Amazon SageMaker, a fully managed service that provides the ability to build, train, and deploy machine learning (ML) models quickly
-1. Run the model locally on AWS DeepLens to predict types of trash without sending any data to the cloud
-1. Send messages over a local area connection to a Raspberry Pi using AWS Internet-of-Things (IoT) Greengrass
+1. Train a model with [Amazon SageMaker](https://aws.amazon.com/sagemaker/), a fully managed service that provides the ability to build, train, and deploy machine learning (ML) models quickly
+1. Running the model locally on AWS DeepLens to predict types of trash without sending any data to the cloud
+1. Optionally, after AWS DeepLens makes its prediction, you can set up AWS DeepLens to send a message to a Raspberry Pi via AWS IoT Greengrass to show you which bin to throw the item in.
+
+The following diagram illustrates the solution architecture.
+
+![Reference Architecture](/images/400_advanced/410_build_a_custom_ml/architecturediagram.png)
 
 ### Prerequisites
 
+To complete this walkthrough, you must have the following prerequisites:
+
 * AWS Account
-* Amazon S3 bucket starting with **deeplens-**. See [how to create one](/100_getting_started/140_setup_data_storage_with_amazon_s3/).
-* AWS DeepLens. [Buy one on Amazon](https://www.amazon.com/AWS-DeepLens-deep-learning-enabled-video-camera-developers/dp/B07JLSHR23).
-* Raspberry Pi with [Sense HAT](https://astro-pi.org/wp-content/uploads/2018/09/T05.2_Meet-the-Sense-HAT.pdf). Get one [here](https://www.raspberrypi.org/products/sense-hat/).
+* An AWS DeepLens device. Available on [Amazon.com](https://www.amazon.com/dp/B07JLSHR23) (US), [Amazon.ca](https://www.amazon.ca/dp/B07JLSHR23) (Canada), [Amazon.co.jp](https://www.amazon.co.jp/dp/B07F17K9J2) (Japan), [Amazon.de](https://www.amazon.de/dp/B07KYKY2K7) (Germany), [Amazon.fr](https://www.amazon.fr/dp/B07KYKY2K7) (France), [Amazon.es](https://www.amazon.es/dp/B07KYKY2K7) (Spain), [Amazon.it](https://www.amazon.it/dp/B07KYKY2K7) (Italy).
+* Raspberry Pi with Sense HAT (optional)
 

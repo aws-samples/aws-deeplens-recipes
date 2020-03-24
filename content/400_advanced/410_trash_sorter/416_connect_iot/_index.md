@@ -5,5 +5,4 @@ chapter: true
 draft: false
 weight: 416
 ---
-
-There have been many questions about how to take the inference of a model and take an action with another device.  In this overview we will show how three updates to the AWS DeepLens project will allow someone to transform a Raspberry Pi into a device ready to help you start making better decisions when you step up to those three bins next time!
+This section discusses optional steps to send results from the DeepLens to an IoT device such as the Raspberry Pi. The Raspberry Pi can then use these results to take action such as moving an arm or displaying a message telling you which bin to throw the trash item in.

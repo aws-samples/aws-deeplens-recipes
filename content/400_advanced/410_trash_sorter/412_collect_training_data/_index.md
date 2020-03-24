@@ -7,24 +7,22 @@ weight: 412
 tags:
   - advanced
 ---
-The type of ML algorithm we will be using today is called an image classification model. These models learn to distinguish between different types of objects by observing many examples over many iterations. We will use a technique called transfer learning to dramatically reduce the time and data required to train an image classification model. For more information on transfer learning with Amazon SageMaker built-in algorithms, make sure you read the [documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/IC-HowItWorks.html). We will only need to collect a couple hundred images of each type of trash to get good accuracy. As we add more training samples and vary the viewing angle, lighting for each type of trash, our model will take longer to train but will improve its accuracy during inference, when we ask the model to classify trash items it has never seen before. 
+This walkthrough uses an ML algorithm called an ***image classification model***. These models learn to distinguish between different objects by observing many examples over many iterations. This post uses a technique called transfer learning to dramatically reduce the time and data required to train an image classification model. For more information about transfer learning with Amazon SageMaker built-in algorithms, see [How Image Classification Works](https://docs.aws.amazon.com/sagemaker/latest/dg/IC-HowItWorks.html). With transfer learning, you only need a few hundred images of each type of trash. As you add more training samples and vary the viewing angle and lighting for each type of trash, the model takes longer to train but improves its accuracy during inference, when you ask the model to classify trash items it has never seen before.
 
 Before going out and collecting images yourself, consider using the many sources for images that are publicly available. Wewant images that have clear labels (often done by humans) on what’s inside the image. Here are some sources you could look for your use case:
 
-1. **AWS Open datasets:** Contains a variety of datasets sourced from trusted entities that are willing to share and open their datasets for general use. For more information, visit https://aws.amazon.com/opendata
-2. **AWS Data Exchange:** You can find datasets that are both free and available for a fee or subscription charge. These are very well curated and labeled and therefore involve a charge in most cases. For more information, visit https://aws.amazon.com/data-exchange/
-3. **GitHub:** There are several public repositories that offer image datasets. Make sure you comply with the terms and conditions, and that you are referencing the original owners when your work is published.
-4. **Kaggle:** Has a wide variety of public datasets, from disease statistics to bird pictures. Also, they provide some interesting starter Jupyter notebooks. For more information visit: https://www.kaggle.com/datasets
-5. **US government** and a lot of non-profit and research organizations publish data for public use under certain terms for time to time. These can be a great source of data for more information visit  https://data.gov/
-6. Finally you can collect, label and use your own datasets, **Amazon SageMaker Groundtruth** can be used to create labeled datasets from your images. You can choose between automated labeling(recommended for common objects) or use human labelers or marketplace offerings for more specialized labeling use cases such as medical imagery, geospatial imagery or hand writing recognition etc. to name a few https://aws.amazon.com/getting-started/tutorials/build-training-datasets-amazon-sagemaker-ground-truth/
+* [AWS Open Data](https://aws.amazon.com/opendata) – Contains a variety of datasets sourced from trusted entities that share and open their datasets for general use. 
+* [AWS Data Exchange](https://aws.amazon.com/data-exchange/) – Contains datasets that are both free and available for a fee or subscription charge. These are very well curated and labeled and therefore involve a charge in most cases. 
+* [GitHub](https://github.com/) – Offers several public repos with image datasets. Make sure you comply with the terms and conditions and reference the original owners when your work is published.
+* [Kaggle](https://www.kaggle.com/datasets) – Has a wide variety of public datasets. Also, they provide some interesting starter Jupyter notebooks. 
+* Non-profit and [government organizations](https://data.gov/) – Often publish data for public use under certain terms. These can be a great source of data.
+* [Amazon SageMaker Ground Truth](https://aws.amazon.com/sagemaker/groundtruth/) – Creates labeled datasets from your images. You can choose between automated labeling (recommended for common objects) or use human labelers or [AWS Marketplace](https://aws.amazon.com/marketplace) offerings for more specific labeling use cases. For more information, see [Build Highly Accurate Training Datasets with Amazon SageMaker Ground Truth](https://aws.amazon.com/getting-started/tutorials/build-training-datasets-amazon-sagemaker-ground-truth/).
 
-We will show you how to train an ML model using data that you would collect. 
+A good practice for collecting images is to use pictures at different possible angles and lighting conditions to make the model more robust. The following image is an example of the type of image the model classifies into landfill, recycling, or compost.
 
-{{< figure src="/images/400_advanced/410_build_a_custom_ml/412_collect_training_data/datasetexample.jpg" title="A sample image, can you guess which category this would fall into? (hint: it’s not compost)" >}}
+![Image Example](/images/400_advanced/410_build_a_custom_ml/412_collect_training_data/datasetexample.jpg)
 
-A good practice for collecting images is to take pictures at different possible angles and lighting conditions to make the model more robust.
-
-Once we have the images for each type of trash, we separate the images of different types of trash into their own folders.
+When you have your images for each type of trash, separate the images into folders. 
 
 ```
 |-images
@@ -35,7 +33,7 @@ Once we have the images for each type of trash, we separate the images of differ
 
         |-Recycle
 ```
+After you have the images you want to train your ML model on, upload them to [Amazon S3](http://aws.amazon.com/s3). First, [create an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html). For AWS DeepLens projects, the S3 bucket names must start with the prefix **deeplens-**.
 
-Once we have the images we want to train our ML model on, we will upload it into Amazon S3.  First, create a [S3 bucket using the AWS Console](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html). For AWS DeepLens projects the Amazon S3 bucket names must start with the prefix “**deeplens-**”.
+This recipe provides a dataset of images labeled under the categories of recycling, landfill, and compost. 
 
-To save you some time, we put together a dataset of images already labeled under the categories Recycling, Landfill and Compost. We will load these images in the next section.
