@@ -29,7 +29,7 @@ Inference is the step where the model is shown images it has never seen before a
 This tutorial provides an example inference Lambda function. 
 
 First we need to create an AWS Lambda function to be deployed to AWS DeepLens
-1.	Download the [deeplens-trash-lambda.zip]([deeplens-trash-lambda.zip](/code/trash-sorter/deeplens-trash-lambda.zip)) onto your computer.
+1.	Download the [deeplens-trash-lambda.zip](/code/trash-sorter/deeplens-trash-lambda.zip) onto your computer.
 2.	Go to AWS Lambda in your AWS console and click **Create Function**.
 3.	Then select **Author from Scratch** and make sure the follow options are selected:
 a.	Runtime: **Python 2.7**

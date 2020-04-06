@@ -31,12 +31,12 @@ weight: 340
 8. Expand View Details
 9. Under: Your unauthenticated identities would like access to Cognito, expand View Policy Document and click Edit.
 10. Click Ok for Edit Policy prompt.
-11. Copy JSON from [cognitopolicy.json](./code/worker-safety/cognitopolicy.json) and paste in the text box.
+11. Copy JSON from [cognitopolicy.json](/code/worker-safety/cognitopolicy.json) and paste in the text box.
 12. Click Allow
 13. Make a note of the Identity Pool as you will need it in the following steps.
 14. Go to AWS IoT in AWS Console at: https://console.aws.amazon.com/iot
 15. Click on settings and make a note of the endpoint, you will need this the following step.
-16. Download [webdashboard.zip](./code/worker-safety/webdashboard.zip) and unzip on your local drive.
+16. Download [webdashboard.zip](/code/worker-safety/webdashboard.zip) and unzip on your local drive.
 17. Edit aws-configuration.js and update poolId with Cognito Identity Pool Id and host with IoT EndPoint you got in the earlier steps.
 18. From the terminal go to the root of the unzipped folder and run “npm install”
 19. Next, run “./node_modules/.bin/webpack —config webpack.config.js”

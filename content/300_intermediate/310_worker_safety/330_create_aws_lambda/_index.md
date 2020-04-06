@@ -23,7 +23,7 @@ weight: 330
 * Key: iot_topic
 * Value: worker-safety-demo-cloud
 
-1. Copy the code from [cloud-lambda.py](/code/cloud-lambda.py) and paste it under the Function code for the Lambda function. 
+1. Copy the code from [cloud-lambda.py](/code/worker-safety/cloud-lambda.py) and paste it under the Function code for the Lambda function. 
 2. Click Save.
 
 1. Under Add triggers, select S3.
