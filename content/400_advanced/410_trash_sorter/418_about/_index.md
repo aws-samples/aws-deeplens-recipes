@@ -33,7 +33,24 @@ tags:
        <p>Raj Kadiyala is an AI/ML Tech Business Development Manager in AWS WWPS Partner Organization. Raj has over 12 years of experience in Machine Learning and likes to spend his free time exploring machine learning for practical every day solutions and staying active in the great outdoors of Colorado.</p>
       </td>
     </tr>
-     <tr>
+    <tr>
+      <td>
+       <p><img src="/images/600_authors/sl-100.jpg" style="margin: 0 auto;"></p>
+      </td>
+      <td>
+       <p>Lakshay Sharma is a Software Development Engineer at Amazon Prime Video who enjoys building and applying Computer Vision and Machine Learning solutions to problems. He is particularly interested in exploring self-supervised, weakly supervised, and few-shot learning techniques.</p>
+      </td>
+    </tr>
+
+         <tr>
+      <td>
+       <p><img src="/images/600_authors/jk-100.jpg" style="margin: 0 auto;"></p>
+      </td>
+      <td>
+       <p>Jeff Keyes is a Principal Engineer with Amazon FreeTime.  Currently, he spends most of his time on analytics and software architecture, but, when time permits, he loves to dabble in machine learning and optimization.</p>
+      </td>
+    </tr>
+    <tr>
       <td>
        <p><img src="/images/600_authors/pn-100.jpg" style="margin: 0 auto;"></p>
       </td>
