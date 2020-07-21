@@ -20,4 +20,12 @@ The programming language we will use for most of our tutorials will be Python.
     body="Build a custom ML model to separate trash, compost and recyclables."
     link="/400_advanced/410_trash_sorter/"
     >}}
+{{< recipe-card
+    title="Posture Tracker"
+    level="Advanced"
+    time="Time: 1-2 hrs"
+    img_src="/images/000_intro/posture-tracker.jpg"
+    body="Build a posture tracker with GluonCV"
+    link="/400_advanced/420_posture_tracker/"
+    >}}
 </div>

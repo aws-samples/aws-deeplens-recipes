@@ -3,7 +3,7 @@ title: "Setup"
 date: 2020-03-04T10:15:55-07:00
 chapter: true
 draft: false
-weight: 310
+weight: 311
 ---
 ### Setup an AWS IAM role for a cloud Lambda function
 

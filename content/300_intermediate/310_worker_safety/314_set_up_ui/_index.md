@@ -3,7 +3,7 @@ title: "Set up the UI dashboard"
 date: 2020-03-04T10:15:55-07:00
 chapter: true
 draft: false
-weight: 340
+weight: 314
 ---
 ### View output in AWS IoT
 

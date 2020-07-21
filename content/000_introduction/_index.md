@@ -10,10 +10,6 @@ tags:
 
 Recipes are curated tutorials from the AWS team designed to show you how to build ML-powered applications with DeepLens.
 
-If you are new to Deeplens, **[continue here](/000_introduction/010_what_is_deeplens/)**.
-
-
-
 If you already have a DeepLens, feel free to skip to any of the following recipes. 
 
 <div class="card-deck">
@@ -50,6 +46,16 @@ If you already have a DeepLens, feel free to skip to any of the following recipe
     img_src="/images/000_intro/trash-sorter.jpg"
     body="Build a custom ML model to separate trash, compost and recyclables."
     link="/400_advanced/410_trash_sorter/"
+    >}}
+</div>
+<div class="card-deck">
+ {{< recipe-card
+    title="Posture Tracker"
+    level="Advanced"
+    time="Time: 1-2 hrs"
+    img_src="/images/000_intro/posture-tracker.jpg"
+    body="Build a posture tracker with GluonCV"
+    link="/400_advanced/420_posture_tracker/"
     >}}
 </div>
 

@@ -3,7 +3,7 @@ title: "Detect hard hats"
 date: 2020-03-04T10:15:55-07:00
 chapter: true
 draft: false
-weight: 330
+weight: 313
 ---
 ### Create a cloud Lambda function to detect hard hats with Amazon Rekognition
 

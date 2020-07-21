@@ -3,7 +3,7 @@ title: "Deploy an object detection project"
 date: 2020-03-04T10:15:55-07:00
 chapter: true
 draft: false
-weight: 320
+weight: 312
 ---
 ### Create an AWS DeepLens project
 
