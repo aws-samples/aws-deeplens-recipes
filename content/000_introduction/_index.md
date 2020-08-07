@@ -10,7 +10,7 @@ tags:
 
 Recipes are curated tutorials from the AWS team designed to show you how to build ML-powered applications with DeepLens.
 
-If you already have a DeepLens, feel free to skip to any of the following recipes. 
+
 
 <div class="card-deck">
 {{< recipe-card 
@@ -29,8 +29,6 @@ If you already have a DeepLens, feel free to skip to any of the following recipe
     body="Use AWS DeepLens and Amazon Rekognition to build an application that helps identify if a person at a construction site is wearing a hard hat."
     link="/300_intermediate/310_worker_safety/"
     >}}
-</div>
-<div class="card-deck">
 {{< recipe-card 
     title="Coffee Counter"
     level="Intermediate"
@@ -39,7 +37,17 @@ If you already have a DeepLens, feel free to skip to any of the following recipe
     body="Build an application that counts the number of cups of coffee that people drink and displays the tally on a leaderboard."
     link="/300_intermediate/320_coffee_counter/"
     >}}
+</div>
+<div class="card-deck">
 {{< recipe-card 
+    title="Guess my Drawing"
+    level="Intermediate"
+    time="Time: 1-2 hrs"
+    img_src="/images/000_intro/guess-drawing.jpg"
+    body="Build a Pictionary-style game with AWS DeepLens and Amazon Alexa."
+    link="/300_intermediate/330_guess_drawing/"
+    >}}
+ {{< recipe-card 
     title="Trash Sorter"
     level="Advanced"
     time="Time: 1-2 hrs"
@@ -47,8 +55,6 @@ If you already have a DeepLens, feel free to skip to any of the following recipe
     body="Build a custom ML model to separate trash, compost and recyclables."
     link="/400_advanced/410_trash_sorter/"
     >}}
-</div>
-<div class="card-deck">
  {{< recipe-card
     title="Posture Tracker"
     level="Advanced"
@@ -58,4 +64,5 @@ If you already have a DeepLens, feel free to skip to any of the following recipe
     link="/400_advanced/420_posture_tracker/"
     >}}
 </div>
+
 

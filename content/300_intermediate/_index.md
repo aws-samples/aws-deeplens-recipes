@@ -28,4 +28,12 @@ The programming language we will use for most of our tutorials will be Python.
     body="Build an application that counts the number of cups of coffee that people drink and displays the tally on a leaderboard."
     link="/300_intermediate/320_coffee_counter/"
     >}}
+ {{< recipe-card
+    title="Guess My Drawing"
+    level="Intermediate"
+    time="Time: 2 hrs"
+    img_src="/images/000_intro/guess-drawing.jpg"
+    body="Build a Pictionary-style game with AWS DeepLens and Amazon Alexa"
+    link="/300_intermediate/330_guess_drawing/"
+    >}}
 </div>
