@@ -13,11 +13,11 @@ weight: 314
 
 ### View output in Amazon CloudWatch
 
-* Go to Amazon CloudWatch Console at https://console.aws.amazon.com/cloudwatch
-* Create a dashboard called “worker-safety-dashboard-your-name”
-* Choose Line in the widget
-* Under Custom Namespaces, select “string”, “Metrics with no dimensions”, and then select PersonsWithSafetyHat and PersonsWithoutSafetyHat.
-* Next, set “Auto-refresh” to the smallest interval possible (1h), and change the “Period” to whatever works best for you (1 second or 5 seconds)
+1. Go to Amazon CloudWatch Console at https://console.aws.amazon.com/cloudwatch
+1. Create a dashboard called “worker-safety-dashboard-your-name”
+1. Choose Line in the widget
+1. Under Custom Namespaces, select “string”, “Metrics with no dimensions”, and then select PersonsWithSafetyHat and PersonsWithoutSafetyHat.
+1. Next, set “Auto-refresh” to the smallest interval possible (1h), and change the “Period” to whatever works best for you (1 second or 5 seconds)
 
 ### View output in the web dashboard
 

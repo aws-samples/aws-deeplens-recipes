@@ -30,7 +30,7 @@ weight: 312
     If a project is already deployed to the device, you will see a warning message "There is an existing project on this device. Do you want to replace it? If you Deploy, AWS DeepLens will remove the current project before deploying the new project." Go ahead and choose Deploy.
 4. On the Review and deploy screen, review your project and click Deploy to deploy the project to your AWS DeepLens. This will take you to the device screen, which shows the progress of your project deployment. Once your deployment is successful, proceed to the next step.
 
-#### Create an AWS DeepLens inference Lambda function
+### Create an AWS DeepLens inference Lambda function
 
 1. Downoad [worker-safety-deeplens-lambda.zip](/code/worker-safety/worker-safety-deeplens-lambda.zip)
 2. Go to AWS Lambda in AWS Console at https://console.aws.amazon.com/lambda/.
@@ -53,12 +53,9 @@ weight: 312
 1. Using your browser, open the AWS DeepLens console at https://console.aws.amazon.com/deeplens/.
 2. Choose Projects, then choose Create new project.
 3. On the Choose project type screen, Choose Create a new blank project, and click Next.
-4. On the Specify project details screen
-
-* Under Project information section:
+4. On the Specify project details screen, under Project information section:
     * Project name: your-user-name-worker-safety (example: kashif-worker-safety)
-* Under Project content:
+5. On the Specify project details screen, under Project content:
     * Click on Add model, click on radio button for deeplens-object-detection and click Add model.
     * Click on Add function, click on radio button for your lambda function (example: kashif-worker-safety-deeplens) lambda function and click Add function.
-
-* Click Create. This returns you to the Projects screen.
+6. Click Create. This returns you to the Projects screen.
